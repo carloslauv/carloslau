@@ -12,6 +12,12 @@ const timeline = [
   { year: "Now", event: "Building AI products. EB1A. What's next." },
 ];
 
+const domains = [
+  { category: "Regulated industries", tags: ["Banking", "Insurance", "Retail", "Logistics"] },
+  { category: "Tech-native companies", tags: ["Uber (Pre-IPO)", "Amazon", "YC S21 founder"] },
+  { category: "Domains", tags: ["Growth", "GTM", "Product", "Enterprise AI", "Operator"] },
+];
+
 const values = [
   { name: "Grit", desc: "The work compounds. Staying in it longer than comfortable is how the hard things get done." },
   { name: "Learning by building", desc: "I understand things by shipping them. The prototype reveals what the spec missed." },
@@ -80,6 +86,69 @@ export default function Origins() {
           >
             Immigrant, builder, operator.
           </h2>
+        </div>
+
+        {/* Domain expertise */}
+        <div
+          style={{
+            marginBottom: "clamp(3rem, 6vw, 4.5rem)",
+            padding: "2rem",
+            background: "var(--surface, #fff)",
+            borderRadius: 14,
+            border: "1px solid var(--surface-border, rgba(12,14,26,0.08))",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-mono, monospace)",
+              fontSize: "0.6875rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "var(--text-3, #5A6180)",
+              marginBottom: "1.5rem",
+            }}
+          >
+            Deep domain knowledge
+          </p>
+          <div style={{ display: "grid", gap: "1.25rem" }}>
+            {domains.map(({ category, tags }) => (
+              <div
+                key={category}
+                style={{ display: "flex", alignItems: "baseline", gap: "1.25rem", flexWrap: "wrap" }}
+              >
+                <span
+                  style={{
+                    fontFamily: "var(--font-mono, monospace)",
+                    fontSize: "0.6875rem",
+                    color: "var(--text-3, #5A6180)",
+                    minWidth: "160px",
+                    flexShrink: 0,
+                  }}
+                >
+                  {category}
+                </span>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+                  {tags.map((tag) => (
+                    <span
+                      key={tag}
+                      style={{
+                        padding: "0.3125rem 0.75rem",
+                        background: "var(--bg, #F7F8FC)",
+                        border: "1px solid var(--surface-border, rgba(12,14,26,0.1))",
+                        borderRadius: 100,
+                        fontSize: "0.8125rem",
+                        fontWeight: 500,
+                        color: "var(--text-2, #3D4260)",
+                        letterSpacing: "-0.01em",
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div
