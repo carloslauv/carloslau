@@ -202,30 +202,18 @@ export default function Hero() {
                 boxShadow: "0 24px 64px rgba(79, 70, 229, 0.18), 0 4px 16px rgba(0,0,0,0.08)",
               }}
             >
-              {/* Gradient placeholder — swap for <img src="/carlos.jpg" … /> */}
-              <div
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/carlos.jpg"
+                alt="Carlos Lau"
                 style={{
                   width: "100%",
                   height: "100%",
-                  background: "linear-gradient(160deg, #4F46E5 0%, #06B6D4 60%, #0C0E1A 100%)",
-                  display: "flex",
-                  alignItems: "flex-end",
-                  justifyContent: "flex-start",
-                  padding: "1.5rem",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  display: "block",
                 }}
-              >
-                <span
-                  style={{
-                    fontFamily: "var(--font-mono, monospace)",
-                    fontSize: "0.6875rem",
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.55)",
-                  }}
-                >
-                  Carlos Lau
-                </span>
-              </div>
+              />
             </div>
           </div>
         </div>
